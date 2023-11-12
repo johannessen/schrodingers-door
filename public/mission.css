@@ -1,0 +1,471 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+html {
+	background: url(taustation/plan-journey-bg.jpg) fixed no-repeat center/cover;
+	background-color: #112;
+	color: white;
+}
+h1 {
+	font-weight: normal;
+	text-transform: uppercase;
+}
+a {
+	text-decoration: underline;
+	color: white;
+}
+a:hover, a:active {
+	color: #ffc71c;  /* flag yellow */
+}
+em, i {
+	font-style: oblique;
+}
+strong small {
+	font-size: inherit;
+	font-weight: normal;
+}
+abbr {
+	text-decoration: none;
+}
+cite {
+	font-style: inherit;
+}
+address {
+	font-style: oblique;
+}
+pre {
+	font-size: .6em;
+	line-height: 1.2;
+	max-width: 100%;
+	overflow: auto;
+	opacity: .2;
+}
+
+
+
+@font-face {
+	font-family: 'Oxanium';
+	font-style: normal;
+	font-weight: 400;
+	font-display: block;
+	src: url(fonts/oxanium-v19-latin-regular.woff) format('woff');
+}
+@font-face {
+	font-family: 'Share Tech';
+	font-style: normal;
+	font-weight: 400;
+	font-display: block;
+	src: url(fonts/share-tech-v21-latin-regular.woff) format('woff');
+}
+
+html, button {
+	font-family: 'Oxanium', 'Trebuchet MS', sans-serif;
+	font-weight: 400;
+}
+
+h1, #gct,
+#choices[action$='success'] > :first-child:before,
+.line.success > :first-child:before {
+	font-family: 'Share Tech', 'Trebuchet MS', sans-serif;
+	font-weight: 400;
+}
+
+
+
+html {
+	height: 100%;
+	font-size: calc(.9em + .3vw);
+	line-height: 1.6;
+}
+
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+header #gct {
+	margin: 0 auto;
+	padding: 0.4em;
+	text-align: center;
+	font-size: 1.2em;
+	width: 12em;
+	-color: #6698a0;
+	color: #a1eefb;
+	background: transparent url(gct-bg.svg) no-repeat top/contain;
+}
+
+footer {
+	position: absolute;
+	bottom: 2ex;
+	left: 0;
+	right: 0;
+	text-align: center;
+	font-size: .7em;
+	line-height: 1.25;
+	opacity: .8;
+}
+footer p {
+	margin: 1ex 0 0;
+}
+
+
+
+button {
+	background: #282213;
+	color: #ffc71c;  /* flag yellow */
+	border: 1.2px solid #DDB32C;
+	font-size: calc(.75em + .25vw);
+	padding: .6ex 1.6em;
+	margin: .6em 0;
+	width: 100%;
+	text-align: center;
+	cursor: pointer;
+}
+button:hover, button:active {
+	color: #fff4d2;
+	background: #6e5a16;
+}
+button:disabled, button:disabled:hover {
+	border-color: #6e5a16;
+	color: #6e5a16;
+	background: #282213;
+	cursor: default;
+}
+#reset button {
+	position: absolute;
+	top: .2em;
+	left: .8em;
+	width: 11em;
+	padding-left: .2em;
+	padding-right: .2em;
+	font-size: .7em;
+	z-index: 1;
+}
+#reset.mission button {
+	left: auto;
+	right: .8em;
+	width: 8em;
+	opacity: .6;
+}
+
+
+
+main.intro {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 8%;
+	padding: 0;
+	display: flex;
+	align-items: center;
+}
+#intro {
+	margin: auto;
+	padding: 2em 1em 1em 7em;
+	max-width: 28em;
+	background: black;
+	background: rgba(0,0,0,.5);
+	box-shadow: 0 0 1em .4em rgba(255,255,255,.1);
+	font-size: .9em;
+	overflow: auto;
+	position: relative; /* for z-index */
+	z-index: 1; /* avoid this being covered by the footer */
+}
+#intro > .container {
+	position: relative;
+	padding-left: 2em;
+}
+#intro > .container:before {
+	content: url(taustation/flag.svg);
+	position: absolute;
+	width: 4.5em;
+	top: 1ex;
+	left: -4.5em;
+}
+#intro h1 {
+	margin-top: 0;
+	font-size: 2.8em;
+}
+#intro .summary {
+	display: inline-block;
+	width: 95%;
+}
+#intro p {
+	margin-top: 0;
+}
+#intro button {
+	width: 12em;
+	padding-left: .4em;
+	padding-right: .2em;
+}
+
+
+
+main.mission {
+	position: absolute;
+	left: 10%;
+	width: 60%;
+	top: 12%;
+	height: 66%;
+	padding: 2% 10%; /* for padding, % is equal to vw. */
+	padding: 4vh 10vw 6vh;
+	background: black;
+	box-shadow: 0 0 1em .4em rgba(255,255,255,.1);
+	display: flex;
+	align-items: center;
+	-outline: 1px solid red;
+}
+main.mission:before {
+	content: url(taustation/mission.svg);
+	position: absolute;
+	top: 4%;
+	left: 4%;
+	width: 7%;
+}
+#next, #back {
+	position: absolute;
+	bottom: 2%;
+	width: 7%;
+	height: 7%;
+	border: none;
+	background: transparent no-repeat center/contain;
+	cursor: pointer;
+}
+#next {
+	background-image: url(next.svg);
+	right: 2%;
+}
+#back {
+	background-image: url(back.svg);
+	left: 2%;
+}
+#next span, #back span {
+	display: none; /* text fallback; not happy with this */
+}
+#next:disabled, #back:disabled {
+	opacity: 0;
+	cursor: default;
+}
+.line, #choices {
+	top: 0;
+	margin: auto;
+	max-width: 40em;
+	max-height: 100%;
+	line-height: 1.8;
+	overflow: auto;
+	display: none;
+}
+.line.current, #choices.current {
+	display: block;
+}
+.line p:first-child {
+	margin-top: 0;
+}
+.line p:last-child {
+	margin-bottom: 0;
+}
+#choices ul, #choices li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+main.mission button {
+	text-align: left;
+}
+#choices[action$='success'] > :first-child:before,
+.line.success > :first-child:before{
+	content: 'Mission Success';
+	display: block;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 3.6em;
+	color: #f63;
+}
+.line.success p {
+	text-align: center;
+}
+
+
+
+.fade-transition, footer.fadeout {
+	transition: opacity 3s linear;
+}
+header.fadeout {
+	opacity: 0;
+}
+footer.fadeout {
+	opacity: .18;
+}
+footer.fadeout:hover {
+	opacity: .6;
+	transition: opacity .6s;
+}
+
+
+
+main.singlepage {
+	padding-top: 4em;
+}
+main.singlepage .line {
+	display: block;
+	margin-bottom: 1.2ex;
+	background: rgba(0,0,0,.25);
+	box-shadow: 0 0 2.2ex .6ex rgba(255,255,255,.1);
+}
+main.singlepage .line p {
+	margin: 1.5ex 1.5ex 1.5ex 2.2ex;
+}
+main.singlepage .line h1 {
+	font-size: 2em;
+	text-align: center;
+	margin: 0;
+}
+main.singlepage .action.line p:before {
+	content: '[';
+}
+main.singlepage .action.line p:after {
+	content: ']';
+}
+main.singlepage .action.line p,
+main.singlepage .action.line li {
+	font-style: oblique;
+	color: #ffc71c;  /* flag yellow */
+}
+#singlepage-warning em {
+	font-style: inherit;
+	color: #ffc71c;  /* flag yellow */
+}
+#singlepage-warning p {
+	font-size: .85em;
+	font-style: oblique;
+}
+#singlepage-warning {
+	margin-bottom: 3ex;
+}
+main.singlepage p.authors-note-link {
+	text-align: center;
+	margin: 2.5em 0 0;
+}
+footer.singlepage {
+	position: static;
+	padding: 3em 0 4em;
+	font-size: .8em;
+}
+
+
+
+.authors-note {
+	position: absolute;
+	top: 4em;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0 2em 0 42%;
+	overflow: auto;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+}
+.authors-note h1 {
+	font-size: 1.2em;
+}
+.authors-note p, .authors-note ul, .authors-note address {
+	font-size: .9em;
+}
+.authors-note footer {
+	position: static;
+	margin: 3em 0 6em;
+	font-size: .8em;
+	opacity: 1;
+}
+figure.map {
+	position: absolute;
+	top: 5em;
+	bottom: 3em;
+	left: 0;
+	width: 40%;
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+figure.map svg {
+	display: block;
+	width: 100%;
+	height: 100%;
+	max-width: 40em;
+	max-height: 40em;
+	margin: auto;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+	/* Strategy: Switch to static positioning for most areas */
+	
+	header, footer {
+		position: static;
+	}
+	footer p {
+		margin-top: 1em;
+	}
+	
+	main.intro {
+		position: static;
+		margin: 2em auto;
+	}
+	#intro {
+		padding-left: 20%;
+	}
+	#intro > .container:before {
+		position: absolute;
+		width: 20%;
+		top: .8ex;
+		left: -20%;
+		min-width: 3em;
+	}
+	
+	main.mission {
+		position: static;
+		width: auto;
+		margin: 2em auto;
+		box-shadow: none;
+	}
+	main.mission #next, main.mission #back {
+		bottom: 12%;
+	}
+	main.mission + footer {
+		position: absolute;
+		opacity: .4;
+		z-index: -1;
+	}
+	main.mission:after {
+		/* cover the stars */
+		content: '\A';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: black;
+		z-index: -1;
+	}
+	
+	main.singlepage {
+		padding-top: 3ex;
+	}
+	
+	.authors-note, figure.map {
+		position: static;
+		width: auto;
+		padding: 0 .5em 3em;
+	}
+	.authors-note {
+		padding: 3em .5em 0;
+	}
+	.authors-note ~ #reset button {
+		top: 5em;
+	}
+}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 30" xml:space="preserve">
+    <linearGradient id="mission-a" gradientUnits="userSpaceOnUse" x1="12.5" y1="1.23" x2="12.5" y2="28.183">
+        <stop offset="0" stop-color="#18c2f9"/>
+        <stop offset=".005" stop-color="#18c2f9"/>
+        <stop offset=".625" stop-color="#14ebfd"/>
+        <stop offset="1" stop-color="#12ffff"/>
+    </linearGradient>
+    <path fill="url(#mission-a)" d="M12.5 30c-.9 0-1.8-.3-2.5-.8l-7.9-5.6c-1.3-.9-2.1-2.4-2.1-4V0h25v19.6c0 1.6-.9 3.1-2.2 4.1l-7.9 5.6c-.7.4-1.5.7-2.4.7z"/>
+    <linearGradient id="mission-b" gradientUnits="userSpaceOnUse" x1="12.5" y1="4.05" x2="12.5" y2="24.353">
+        <stop offset="0" stop-color="#0d1927"/>
+        <stop offset=".989" stop-color="#03070c"/>
+        <stop offset="1" stop-color="#03070c"/>
+    </linearGradient>
+    <path fill="url(#mission-b)" d="M12.5 28.2c-.5 0-1-.2-1.4-.5l-7.9-5.6c-.8-.6-1.3-1.6-1.3-2.6V1.8h21.4v17.8c0 1-.5 2-1.4 2.6L14 27.8c-.5.2-1 .4-1.5.4z"/>
+    <path fill="#FFC71C" d="M6 5v15.6l6.5-3.6 6.5 3.6V5H6zm9.9 11.5-3.3-2.4-3.4 2.4 1.2-3.8-3.2-2.5h3.9l1.4-4 1.4 4h3.9l-3.2 2.4 1.3 3.9z"/>
+    <path fill="#DDB32C" d="M6 4h13v.9H6z"/>
+</svg>
+

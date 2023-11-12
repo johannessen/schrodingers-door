@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang=en>
+<meta charset=UTF-8>
+<title><%= $mission->name %>: A tribute to Tau Station (single page view)</title>
+<meta name=viewport content="initial-scale=1">
+<meta name=robots content=noindex>
+<style>
+@import url(mission.css);
+</style>
+<script src="mission.js" defer></script>
+
+<header>
+<div role=timer aria-label="time" id=gct></div>
+</header>
+
+<main class=singlepage>
+
+<div class=line id=singlepage-warning>
+	<p><em>Note:</em> This is a <em>single-page version</em> of the mission.
+	It doesn’t present the flow of its choices in an entirely accurate fashion and it may allow you to skip lines, leading to <em>spoilers</em>.
+	The recommended way to read this story is to <a href="<%= url_for('default') %>">start the “<%= $mission->name %>” mission</a> and follow it regularly.
+</div>
+
+<div class=line>
+	<h1><%= $mission->name %></h1>
+</div>
+
+% for my $line ($mission->lines_singlepage->@*) {
+<div class="<%= $line->{class} %>">
+%  for my $p (split "\n", $line->{text}) {
+%   if ($line->{action}) {
+	<p><i><%== md_escape $p %></i></p>
+%   } else {
+	<p><%== md_escape $p %></p>
+%   }
+%   if ($line->{list}) {
+	<ul>
+%    for my $item ($line->{list}->@*) {
+		<li><%= $item %>
+%    }
+	</ul>
+%   }
+%  }
+</div>
+% }
+
+<p class=authors-note-link><a href="<%= url_for('authors-note') %>">Author’s Note</a>
+
+</main>
+
+<footer class=singlepage>
+	<p>Source code, terms, and contact <a href=//github.com/johannessen/schrodingers-door>via GitHub</a>.
+	<p><strong><small>
+		This website is a private project and not an official offer by the creators of <a href=https://allaroundtheworld.fr/game>Tau&nbsp;Station</a>.
+		<br>Tau Station pictures courtesy of Makes Dreams Happen SASU, France.
+	</small></strong>
+</footer>

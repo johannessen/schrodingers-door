@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang=en>
+<meta charset=UTF-8>
+<title><%= $mission->name %>: A tribute to Tau Station</title>
+<meta name=viewport content="initial-scale=1">
+<meta name=robots content=noindex>
+<style>
+@import url(mission.css);
+</style>
+<script src="mission.js" defer></script>
+
+<header>
+<div role=timer aria-label="time" id=gct></div>
+</header>
+
+<main class=intro>
+<div id=intro>
+<div class=container>
+
+<h1><%= $mission->name %></h1>
+<div class=summary>
+	<p><%= $mission->summary %>
+	<form action="<%= url_for('start') %>" method=post>
+		<p><button name=start>Start the mission.</button>
+	</form>
+</div>
+
+</div>
+</div>
+</main>
+
+<footer>
+	<p>A <a href="<%= url_for('singlepage') %>">single page version</a> is available.
+	<p>Source code, terms, and contact <a href=//github.com/johannessen/schrodingers-door>via GitHub</a>.
+	<p><strong><small>
+		This website is a private project and not an official offer by the creators of <a href=https://allaroundtheworld.fr/game>Tau&nbsp;Station</a>.
+		<br>Tau Station pictures courtesy of Makes Dreams Happen SASU, France.
+	</small></strong>
+</footer>

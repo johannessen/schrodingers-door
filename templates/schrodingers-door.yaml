@@ -1,0 +1,319 @@
+---
+name: Schrö­din­ger’s Door
+summary: You wake up in your cabin during a total station blackout. Will you be able to solve the problem and bring Tau Station back to life?
+author: Arne Johannessen ("MrAtoka")
+date: 2023-11
+license: CC-BY-4.0
+choices:
+
+  door-force:
+    name: Force the door open.
+    uses: strength
+    lines:
+    - You try to use your considerable strength to force the door open.
+    - It’s a sturdy door, built out of some kind of metal alloy with composite slabs. To force it, you would need proper tools for metal work.
+    - |
+      You know where to buy such tools, where to borrow them. You probably even have some in your storage lockers by the Grand Market or at the Docks.
+      But you don’t keep metalwork tools in your bedroom.
+    - You try to get past the door without tools, banging away against the jambs with your fists. You claw at the composite seams and batter up the lockset.
+    - |
+      But it’s pretty much hopeless.
+      This door is stronger than you are.
+
+  door-wait:
+    name: Wait until the door opens by itself.
+    uses: stamina
+    lines:
+    - Really, the door has always opened when it was needed. You’re certain that this time, too, the door will return to working order. It’s just a matter of waiting.
+    - So you wait.
+    - So you wait longer.
+    - So you wait even longer.
+    - Units pass.
+    - Units pass, then segments.
+    - Just wait; this door simply *has* to open eventually.
+    - Except – it doesn’t.
+
+  door-vent:
+    name: Get out through the ceiling vent.
+    uses: agility
+    lines:
+    - You know there’s an air vent up in the regocrete ceiling of your room. With the ventilation fans shut down, it might be safe to go through there. Thanks to regular visits to the Gym, you might just fit!
+    - The ceiling is high. You can barely touch it even when jumping, and there is nothing to hold on to. Not to mention that it’s dark, which makes targeting your jumps up to the vent difficult, to say the least.
+    - |
+      It might indeed be possible to go through the vent if you could reach it.
+      But you can’t.
+
+  door-rewind:
+    name: Rewind time back to when the door was open.
+    uses: agility
+    lines:
+    - The door was open before, so it can be open again. It’s just a matter of adjusting your position in the fourth dimension to a point where the door already *is* open.
+    - Alas, try as you might, in the physical universe we occupy, time is one-directional.
+    - It turns out life isn’t really that strange.
+
+  door-hack:
+    name: Hack the door lock.
+    uses: intelligence
+    lines:
+    - You try to hack the electronic door lock using your CORETECHS.
+    - |
+      The door lock doesn’t have power.
+      Your CORETECHS doesn’t, either.
+    - Your cunning hacking skills have taken people by surprise all over the many systems you visited during your travels. But clearly, without any power, hacking isn’t going to be the solution here.
+
+  door-shout:
+    name: Shout for somebody to come and help you.
+    uses: social
+    lines:
+    - |
+      You shout out for help.
+      Loudly.
+      You shout again. At the top of your voice, again and yet again.
+    - But nobody came.
+    - (The intense silence fills you with determination.)
+
+  skip-general-rumours:
+    name: Stay focused. Consider the latest threat.
+  general-rumours:
+    name: Contemplate rumours and threats in general.
+  rumours:
+    name: Consider the latest threat.
+
+  eyes:
+    name: Open your eyes.
+
+
+---
+- |
+  218.28/08:080 GCT
+- event: fadeout
+  text: Blackness.
+- |
+  Silence.
+- |
+  No lights, no sounds. Perhaps not anywhere on the station. It seems that primary and backup power systems have failed entirely.
+- |
+  218.28/08:080 GCT, Galactic Coordinated Time.
+  That is what you remember the wall clock saying the last time you looked at it before going back to sleep. You remember, because the segment and unit digits looked like a palindrome: “08080”
+- |
+  Since waking up, everything is dark.
+  Even more worryingly, everything is silent.
+- |
+  Not the regular silence.
+  Tau Station is usually orderly and without much raucous noise. Even so, there’s always the slight humming of the life-support systems. The enormous recycler fans that keep pushing air through the filters. Water running through the pipes to the washroom one floor up. People talking to each other quietly as they pass outside your door. Confirmation beeps of various electronic equipment. The occasional metallic bangs from cargo unloaders in the Shipping Bay.
+- |
+  You hear nothing of any of that now.
+  It feels like the silence of death.
+- |
+  It’s so silent that you hear your own breath.
+  At least as long as you’re still breathing, there is hope.
+  But without power, what can you do?
+- |
+  It’s not just that the lights don’t work and you see nothing but the faint blue glow of the small luminised light switch by the door.
+  The more immediate problem is that the electronic lock of the door itself doesn’t open.
+  Plus, even your CORETECHS is unavailable.
+- |
+  The door refused to open before once, briefly, a cycle or so ago. That time, a strange error message flashed on your CORETECHS.
+  “Connection failed: Server https://taustation.space unreachable. Check WiFi link.”
+  Whatever this message was, evidently it signified that you were unable to go through this door, and hence were unable to reach the rest of Tau Station.
+  This time, the door just stays closed. With CORETECHS down, there isn’t even an error message.
+- |
+  This door is the only way to leave your room – your only way to access Tau Station.
+- |
+  Without power, pretty much all of Tau Station won’t be operational right now.
+  The Capital Detention Complex, for example, will no longer have force shields keeping the prisoners in their brig cells.
+- |
+  The vats down at the Crick-Watson Cloning Facility may have backup power.
+  Or not.
+  For the sake of everyone who may urgently need their clone right about now, you hope that they do.
+- |
+  The Government Center will be clouded in darkness, officials and guards no doubt in a state of frenzy over the station blackout.
+  Machines at Sol Fitness won’t be working. Neither food nor drinks will be served in the Wayfarer Inn.
+- |
+  You’re not sure what might be going on in the stalls on the Grand Market. Or in the ruins of The Red Zones.
+  Or at Security Services, for that matter. They must be freaking out about this.
+- |
+  Whatever might be happening everywhere on Tau Station, you won’t be able to help with resolving the blackout as long as you’re locked inside your room.
+- |
+  You need to leave your room and return to Tau Station.
+  You need to get past this door.
+
+- choice: [ door-force, door-vent, door-hack, door-shout, door-wait ]
+
+
+---
+- |
+  Staring through the darkness towards where you know the door to be, you wonder what might have caused this blackout.
+- |
+  There’ve been rumours about a serious threat to Tau Station for a while now.
+- |
+  Actually, there have always been rumours about threats.
+  Lots of rumours.
+
+- choice: [ general-rumours, skip-general-rumours ]
+
+
+---
+- |
+  Freebooters, for example, are said to be in possession of some kind of awful weapon. They say it causes energy surges in stars, leading to the destruction of entire star systems.
+- |
+  In typical ’Booter fashion, they came up with a weird name for it, calling it the “Apples of Discord.”
+- |
+  Obviously, no one alive has witnessed that weapon’s effects first-hand, so who knows – it might be an elaborate bluff. One thing’s for sure: Even deep inside the Freebooter’s Sirius system, information about the weapon is closely held. You once joined a Gate Truths reporter named Milanka Keres on an investigation of the Apples of Discord, but the two of you largely came up dry.
+- |
+  But now you can’t help wondering: Might that weapon in fact not be something that causes a nova, but instead something to knock out power everywhere?
+- |
+  Or maybe the blackout wasn’t caused by a weapon at all.
+  Maybe it was a science experiment gone awry?
+- |
+  Actually, thinking about Freebooters: You did experience something like that first-hand when you visited Heinlein Stronghold during your travels.
+  A scientist aptly named Moss the Maddest turned off the entire space station. Just turned it off. In fact, he even used you to do his bidding. The whole thing was an experimental way to resolve glitches in the station’s systems.
+- |
+  To his credit, Moss got that station working right again pretty quickly. So, mad as he might be, the current blackout is unlikely to be his doing. And it’s hard to see a reason why scientists on Tau Station of all places would do something this crazy anyway.
+- |
+  Speaking of crazy, you suddenly remember the people of Luyten 726-8 Jump Gate, or “Little Earth” as they call it themselves. They actually believe that extraterrestrial aliens caused the Catastrophe, wanting to kill all humanity out of vengeance, and that they will come back some time to finish the job.
+  Yeah, right.
+  Compared to that, even the Prometheans sound well-reasoned.
+- |
+  But aliens or not, the question is highly relevant: Is this a second Catastrophe?
+  You hope not. There was more than enough death and destruction the first time, thank you very much.
+- |
+  To your knowledge, the actual cause of the Catastrophe has never been established.
+- |
+  Some of the Gaule believe the Catastrophe was intentionally caused by the Consortium.
+  Just a rumour.
+  It can’t be true, obviously. After all, the Consortium would never do something that evil. You of all people must know, for you are a Consortium citizen.
+- |
+  (The intense efforts of Consortium officials to hide certain documents keep nagging at your conscience even as you think this. It was in the Barnard’s Star system that you learned about the Bakker Inquest, a report which tells what actually happened there during the Catastrophe, and which the Consortium has been refusing to release publicly. Why keep it secret if there is nothing to hide?)
+
+- choice: [ rumours ]
+
+# Even though the Bakker Inquest might not actually have revealed anything
+# nefarious on the part of the Consortium, it’s worth mentioning that the
+# same might not be true about the Water Raids, see the missions
+# “Hero’s Journey” and “Journey’s End”. Blind trust into governments rarely
+# is a good idea.
+
+# Another possible explanation for events might be Mesh nodes having gone down.
+# In the mission “Bond Villain”, Vollmer explains that just about everything
+# relies on them, including air and water systems. There are hundreds on the
+# station, “and if they all go down at the same time we’ll have ourselves a
+# nice little mini-catastrophe”.
+
+
+---
+- |
+  “There have always been rumours” – yes, indeed.
+  But this particular one was different.
+- |
+  The nature of the alleged threat to Tau Station was never clearly specified, for one thing.
+  It would be bad, *really* bad, they said. The entire universe would cease to exist, they said. With such unreasonable extremes, and lacking specifics, you never paid much heed to this rumour.
+  Especially since what few details *were* given were utterly implausible.
+- |
+  It was suggested that – somehow – the supposed threat would be coming from within the Gaule Protectorate this time.
+  It was suggested that a Gaulish authority called “CNC” would be the one causing the trouble. You had never heard of CNC before, but apparently they were a national institution of the Gaule, based on Paris Spatiale. People said their goal was to further the creation of Gaulish art, to support artists with credits.
+- |
+  While the CNC’s focus apparently was on audiovisual art, you believe that they might be the same government authority that provides funding to famous art institutions, such as the Grande Galaxie Museum and Gallery on Nouveau Limoges. But maybe that would be down to a different authority, you’re not sure. As a Consortium citizen, you’re not well-versed in the intricacies of Gaule bureaucracy.
+- |
+  The rumour never made much sense to you.
+  How could it possibly be that something as beautiful, as *noble* as the national endowment of the arts of the Gaule Protectorate would cause the end of the universe? Ridiculous.
+- |
+  When you heard it before, you dismissed the rumour out of hand as a matter of course. You’re a rational person, not some kind of a loon.
+  But now, facing the reality of the door to Tau Station that won’t open, you need to consider the possibility that perhaps that rumour was true after all.
+
+- choice: [ door-force, door-vent, door-hack, door-shout, door-wait ]
+
+
+---
+- |
+  Setting rumours aside for the moment, you wonder what the situation might be in the rest of the universe right now. Surely, it can’t be like this everywhere – or can it?
+- |
+  Still thinking about art, you recall your visits to Madame Pompadour in the Ross 154 system.
+- |
+  The marketplace beneath the great marble arcs is probably crowded right now. The electric lights in the ornamental lamp posts are working, delivering a friendly atmosphere together with the red dwarf star’s natural light that is coming in through the hemispherical lid above.
+- |
+  Phillipe Gaston is offering exclusive pieces crafted by Yvette Tanguy in his store, attracting admirers from near and far. Just down the avenue, Jean Ketland – as always dressed in immaculate white – is standing in his upscale gallery, offering rare sights of Old Earth treasures. There’s some ancient music playing softly.
+- |
+  Or are there, instead, blackouts on Pompadour as well?
+- |
+  If so, they will probably affect the GIMIC mines, too. You dread the thought of that rickety yellow elevator refusing to go up the mine shaft. Iridium miners being stuck inside the depths of the asteroid indefinitely, tragically expecting that the elevator is only jammed briefly, which you know is common.
+- |
+  In the case of widespread blackouts, broken-down technology would be a massive problem. In this universe, literally everything depends on energy.
+- |
+  The economy. Security and law enforcement. Medical care. Food production. Services. Travelling. Leisure activities.
+  Everything needs energy to function.
+  Not to even mention mundane things like doors.
+- |
+  During one of the many times you passed through Alpha Centauri Jump Gate, you participated in an expedition into a previously inaccessible area of the station. The door which sealed off that particular area had been shut tight since the Catastrophe due to the release panel having been fried in all the mayhem. It would only open up after being hot-wired by technicians in your presence.
+- |
+  After the seal door was opened, it turned out that there were actually living people on *both* sides of the door, for hundreds of cycles, ever since the Catastrophe.
+- |
+  Neither group knew of the other one. The closed door had kept them apart.
+- |
+  Just like the door in your own room is keeping you apart from Tau Station.
+
+- choice: [ door-force, door-vent, door-hack, door-shout, door-wait ]
+  singlepage: show
+
+
+---
+- |
+  Further considering the situation, you’re suddenly struck by the thought that perhaps there actually is no total blackout.
+  Could it be that your room is in fact the only one that lost power?
+- |
+  You close your eyes, allowing your imagination to show you what goes on beyond this door.
+- |
+  You think of the Oasis Pub – the bartender, Eleni Llywelyn, standing behind the large rounded bar with her smile, keenly observing patrons chatting with each other while pouring a fresh pint of bubbly synth-ale.
+- |
+  In your mind’s eye, you get up and exit the large booth you’ve been sitting in, leaving the remnants of your hearty meal to be tidied by one of the Cleaning Bots, perhaps just the one you helped Eleni to repair here cycles ago.
+- |
+  You stroll towards the Port of Tau Station, making your way past the Grand Market. Vendors are haggling with customers, trying to cut a more attractive deal than what their competition offers.
+- |
+  There’s Norbert in his corner, giving you a friendly wave as he recognises you from the many times you needed his help with repairing robots and other strange tech.
+- |
+  Reaching the Port, you see Fellie Norbush standing under her vibrant Benevolent Dynamics banner. As usual, she’s offering travellers and passers-by manual CORETECHS calibrations, answering all their questions patiently and with a bright smile.
+- |
+  The Local Shuttles terminal is busy, as are the private Docks. Two Razorbacks and a Mantis Class Private Cruiser have just arrived less than a segment ago, their captains possibly having come from far-away star systems through one of the many interstellar passages available at Sol Jump Gate.
+- |
+  Having passed through the Port, you reach the University of Tau Station. Students are lining up for their appointments with education technicians, each awaiting a nanite injection, allowing them to gain the skills for life they need in this universe.
+- |
+  You look around for Professor Octavia, who you know has been working on a collaborative encyclopedia – or “wiki,” as she cryptically calls it –, an attempt to record all of humanity’s scarce post-Cat knowledge, accessible for all on the Mesh. She likes to wear her colourful ceremonial gown while working, so she’s usually easy to spot.
+- |
+  The esteemed professor is nowhere to be seen. But in the corridor outside her office, several computer terminals are powered up, their brightly lit screens showing the encyclopedia. Apparently, new edits were made only recently by several citizens, having connected through the Mesh from all over the galaxy.
+
+- choice: [ eyes ]
+
+
+---
+- |
+  You open your eyes. Your room is unchanged – dark and quiet.
+  The door is still closed.
+- |
+  The simple truth of the matter is:
+  There’s no way to know what is or isn’t happening on the other side.
+- |
+  In a manner of speaking, right now, you *are* on Tau Station.
+  But as long as the door is shut, for all intents and purposes, that very door is also what keeps you *out* of Tau Station.
+- |
+  Is Tau Station dead behind the door?
+  Or is it alive and bustling?
+- |
+  There is no way to know.
+  In fact, as long as the door is closed, one might say that Tau Station is dead *and* alive.
+- |
+  Dead and alive at the same time.
+- |
+  It’s dead to you, because you can’t enter it. You can’t meet people on Tau Station, you can’t travel to neighbouring stations, you can’t use jump gates.
+- event: fadein
+  text: But at the same time, Tau Station also is alive.
+- |
+  Tau Station is alive in our minds, in our dreams.
+- |
+  Tau Station is alive in our hearts.
+- |
+  And that’s how it will remain. Always.
+
+- event: success
+  text: You received 0.00 credits.
+
+- choice: [ success ]

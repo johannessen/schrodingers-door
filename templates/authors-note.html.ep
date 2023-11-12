@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang=en>
+<meta charset=UTF-8>
+<title>Author’s note on <%= $mission->name %>: A tribute to Tau Station</title>
+<meta name=viewport content="initial-scale=1">
+<meta name=robots content=noindex>
+<style>
+@import url(mission.css);
+</style>
+<script src="mission.js" defer></script>
+
+<header>
+<div role=timer aria-label="time" id=gct></div>
+</header>
+
+<div class=authors-note>
+
+<main>
+
+<h1><%= $mission->name %> – Author’s note</h1>
+
+<p>
+If you would like to tell me about your experience with this mission, please feel free to <a href=//snabelen.no/@ajnn>get in touch</a>.
+I’d love to hear from you!
+
+<p>
+<%= $mission->name %> is a story about <a href=//taustation.space>taustation.space</a>, a rich browser-based text MMORPG with thought provoking stories set in a post-apocalyptic science fiction universe.
+Unfortunately, <a href=http://taustation.wikidot.com/tribute-page><cite>Tau Station</cite> was forced to close</a> before it left beta.
+
+<p>
+The game’s sudden end left me in search for closure. An entire narrative universe was effectively erased from existence.
+At the same time, I felt grateful for having experienced it at all.
+In <%= $mission->name %>, I tried finding a way to reconcile the uncertainty about how the narrative of the <cite>Tau Station</cite> universe might have continued with the narrative itself.
+
+<p>
+The locked door to your room is, of course, a metaphor for the game’s web site:
+The web site being offline prevents access to the game <cite>Tau Station</cite>, while the locked door prevents you, the story’s reader, from accessing the space station sharing that name in the game universe.
+
+<p>
+Since the public web server is down permanently, the game <cite>Tau Station</cite> clearly is dead.
+Yet, for all we know, it might still be alive somewhere, on an internal server.
+We just can’t observe whether that is in fact the case or not.
+
+<p>
+Such difficulties in attributing the state of unobserved systems are familiar from quantum theory.
+The thought experiment known as <a href=//en.wikipedia.org/wiki/Schr%C3%B6dinger%27s_cat>Schrödinger’s cat</a> illustrates that under certain interpretations of quantum mechanics, an animal might exist dead and alive simultaneously.
+The name of this story quite obviously is a nod of the head to that paradox.
+
+<p>But we don’t even have to resort to a paradox here to see that the state of <cite>Tau Station</cite> is at least somewhat uncertain.
+Personally, I believe that both the content of <cite>Tau Station</cite> and its technical platform hold immense value.
+<!--
+By content, I mean narrative and artwork.
+Tau Station was the result of many years of hard work, after all, and it showed.
+-->
+It’s not a stretch to imagine that one or both of these could be salvaged in part or in whole, one day allowing if not <cite>Tau Station</cite> as we know it, then something rather similar to exist.
+<em>Perhaps</em> the <cite>Tau Station</cite> team is working on that right now.
+But perhaps not.
+It’s not for me to say.
+
+<p>
+I <em>can</em> say that a narrative locked inside the walls of a web app like <cite>Tau Station</cite> has a higher risk of becoming lost from humanity’s cultural heritage than pretty much all other works of art.
+<a href=//en.wikipedia.org/wiki/Library>Printed books</a> can be archived, <a href=//en.wikipedia.org/wiki/Wayback_Machine>static web sites</a> can be archived, <a href=//en.wikipedia.org/wiki/Video_game_museum>classic video games</a> can be archived; an interactive web experience like <cite>Tau Station</cite> cannot.
+It inherently relies on the server, which is now gone.
+In the <cite>Tau Station</cite> universe, a similar loss of knowledge occurred on an even grander scale during <a href=http://taustation.wikidot.com/the-catastrophe>the Catastrophe</a>.
+This loss is part of why I continue to hope for some kind of a solution.
+
+<!--
+Regarding the cultural implications of inaccessible works of art, see also:
+https://www.theguardian.com/books/2021/jun/24/most-of-australias-literary-heritage-is-out-of-print-the-fight-to-rescue-a-nations-lost-books
+https://doi.org/10.1093/acprof:osobl/9780199760091.003.0009
+-->
+
+<p>
+In the meantime, I offer this story as a tribute to <cite>Tau Station</cite>.
+The story’s presentation is somewhat similar to the way in which many stories (or missions) in the game were presented.
+<%= $mission->name %> is, however, more linear than the typical game mission.
+The central story element being you sitting alone in your cabin, <%= $mission->name %> also doesn’t contain any conversations with other characters, which greatly simplified the technical requirements on my side.
+
+<p>
+In writing <%= $mission->name %>, I relied on the <a href=http://taustation.wikidot.com>Tau Station Wiki</a> quite a lot.
+Among other things, the wiki contains partial transcripts of many game missions, which alleviates the cultural loss explained above to a small degree.
+
+<p>
+I tried to include a few references to concepts and missions readers would know from having played <cite>Tau Station</cite>, listed here in no particular order and without claiming completeness.
+While I do have memories of many of the game’s missions and even notes on some, the wiki allowed me to verify these and to weave them together into a (hopefully) coherent narrative.
+
+<ul>
+<li><a href=http://taustation.wikidot.com/encyclopedia-editor><cite>Encyclopedia Editor</cite></a>
+<li><a href=http://taustation.wikidot.com/coretechs-calibrations><cite>CORETECHS Calibrations</cite></a>
+<li><a href=http://taustation.wikidot.com/secrets-and-servos><cite>Secrets and Servos</cite></a>
+<li><a href=http://taustation.wikidot.com/beyond-the-seal><cite>Beyond the Seal</cite></a>
+<li><a href=http://taustation.wikidot.com/h-y-t-t-i-o-a-o-a><cite><abbr title="Have You Tried Turning It Off And On Again">H.Y.T.T.I.O.A.O.A.</abbr></cite></a>
+<li><a href=http://taustation.wikidot.com/the-apples-of-their-eye><cite>The Apples of their Eye</cite></a>
+<li><a href=http://taustation.wikidot.com/keeping-the-peace><cite>Keeping the Peace</cite></a>
+<li><a href=http://taustation.wikidot.com/cradling-the-stars><cite>Cradling the Stars</cite></a>
+<li><a href=http://taustation.wikidot.com/galactic-coordinated-time>Galactic Coordinated Time</a> – the clock at the top shows real time, <abbr title="by the way">btw</abbr>
+<li><a href=https://tauguide.de/#travel>Systems and stations</a> – the map on this page moves in real time, too!
+<li>and others …
+</ul>
+
+<p>
+If you haven’t done so already, I encourage you to leave a few words on the <a href=http://taustation.wikidot.com/tribute-page>Tribute Page</a> for <cite>Tau Station</cite> on the wiki.
+
+<p>
+Finally, once again:
+If you would like to tell me how you liked <%= $mission->name %>, please do get in touch.
+
+<!--
+<p>
+<q>… and so I close, realizing that perhaps, the ending has not yet been written.</q>
+—<a href=//en.wikiquote.org/wiki/Myst><cite>Myst</cite> opening voiceover</a>
+-->
+
+<address>
+	<a href=//arne.johannessen.de>Arne Johannessen</a> (“MrAtoka”)
+	<br>November 2023
+</address>
+
+</main>
+
+<footer>
+	<p>The <a href=//github.com/johannessen/schrodingers-door>source code for <%= $mission->name %></a> is available on GitHub, along with terms of use.
+	<p><strong><small>
+		This website is a private project and not an official offer by the creators of <a href=https://allaroundtheworld.fr/game>Tau&nbsp;Station</a>.
+		<br>Tau Station pictures courtesy of Makes Dreams Happen SASU, France.
+	</small></strong>
+</footer>
+
+</div>
+
+<figure class=map>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-600 -600 1200 1200">
+<style>
+text { text-anchor:middle; font-size:24px; font-family:'Oxanium','Trebuchet MS',sans-serif; fill:#ccc; }
+#title text, #scale rect { fill:white; opacity:.4; }
+#body text { fill:#c63; }
+#body circle { fill:#e84; fill:#741; }
+circle.orbit { stroke:#ccc; fill:none; opacity:.25; }
+.consortium.station { fill:#ccf; }
+.freebooter.station { fill:#c96; }
+.gaule.station { fill:#fcc; }
+.independent.station { fill:#cfc; }
+#scale { display:none; }
+</style>
+
+<g id="title">
+	<text x="-420" y="-525">Sol</text>
+	<text x="-420" y="-500" id="svg-time">218.28/00:000 GCT</text>
+</g>
+
+<g id="scale">
+	<rect x="-500" y="500" width="200" height="2" />
+	<text x="-400" y="495">5000 km</text>
+</g>
+
+<g id="system" transform="rotate(223)">
+	
+	<g id="body">
+		<circle r="135.6" transform="scale(.98)" />
+		<image x="-135.6" y="-135.6" width="271.2" height="271.2" preserveAspectRatio="none" href="mars.png" xlink:href="mars.png">
+			<title>Mars</title>
+		</image>
+	</g>
+	
+	<g id="stations">
+		<g id="SOLJ" transform="rotate(-282)" data-period="50846">
+			<circle r="507.9" class="orbit" />
+			<circle cy="-507.9" r="5" class="consortium station">
+				<title>Sol Jump Gate</title>
+			</circle>
+		</g>
+		
+		<g id="TAST" transform="rotate(-223)" data-period="41096">
+			<circle r="441.5" class="orbit" />
+			<circle cy="-441.5" r="5" class="consortium station">
+				<title>Tau Station</title>
+			</circle>
+			<text y="-475.5">Tau</text>
+			<text y="-453.5">Station</text>
+		</g>
+		
+		<g id="LIMO" transform="rotate(-251)" data-period="32504">
+			<circle r="376.9" class="orbit" />
+			<circle cy="-376.9" r="5" class="gaule station">
+				<title>Noveau Limoges</title>
+			</circle>
+		</g>
+		
+		<g id="KBHV" transform="rotate(-62)" data-period="21770">
+			<circle r="289.5" class="orbit" />
+			<circle cy="-289.5" r="5" class="consortium station">
+				<title>København</title>
+			</circle>
+		</g>
+		
+		<g id="DAED" transform="rotate(-167)" data-period="18375">
+			<circle r="259.8" class="orbit" />
+			<circle cy="-259.8" r="5" class="consortium station">
+				<title>Daedalus</title>
+			</circle>
+		</g>
+		
+		<g id="TAUN" transform="rotate(-206)" data-period="7500">
+			<circle r="141.3" class="orbit" />
+			<circle cy="-141.3" r="5" class="consortium station">
+				<title>Taungoo</title>
+			</circle>
+		</g>
+	</g>
+	
+</g>
+</svg>
+<!-- Station positions are illustrative. Not for navigation. -->
+</figure>
+
+<form action="<%= url_for('reset') %>" method=post id=reset>
+<button>Re-explore mission</button>
+</form>

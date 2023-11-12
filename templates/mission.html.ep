@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang=en>
+<meta charset=UTF-8>
+<title><%= $mission->name %>: A tribute to Tau Station</title>
+<meta name=viewport content="initial-scale=1">
+<meta name=robots content=noindex>
+<style>
+@import url(mission.css);
+</style>
+<script src="mission.js" defer></script>
+
+<header<%== session('scene') > 0 ? " class=fadeout" : "" %>>
+<div role=timer aria-label="time" id=gct></div>
+</header>
+
+<main class=mission>
+
+% for my $line ($lines->@*) {
+%  my $event = ref $line eq 'HASH' && $line->{event} ? " $line->{event}" : "";
+<div class="line<%= $event %>">
+%  for my $p (split "\n", $event ? $line->{text} : $line // '') {
+	<p><%== md_escape $p %>
+%  }
+</div>
+% }
+
+<button id=back aria-label="back"><span>back</span></button>
+<button id=next aria-label="next"><span>next</span></button>
+
+<form action="<%= $action %>" method=post id=choices>
+<ul>
+% no warnings "experimental::for_list";
+% for my ($id, $choice) ($choices->@*) {
+%  my $disabled = choice_valid($id) ? "" : " disabled";
+<li>
+	<button name=choice value=<%= $id %><%= $disabled %>>
+		<%= $choice->{name} // $id %>
+		<%= $disabled ? "(Needs more $choice->{uses}.)" : "" %>
+	</button>
+</li>
+% }
+</ul>
+</form>
+
+</main>
+
+<footer<%== session('scene') > 0 ? " class=fadeout" : "" %>>
+	<p><strong><small>
+		This website is a private project and not an official offer by the creators of <a href=https://allaroundtheworld.fr/game>Tau&nbsp;Station</a>.
+		<br>Tau Station pictures courtesy of Makes Dreams Happen SASU, France.
+	</small></strong>
+</footer>
+
+<form action="<%= url_for('reset') %>" method=post id=reset class=mission>
+<button>Abort mission</button>
+</form>
