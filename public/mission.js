@@ -146,6 +146,10 @@ function handleLineEvents (ele) {
 			footer.classList.add("fade-transition");
 			footer.classList.remove("fadeout");
 			break;
+		case "success":
+			// Prevent "success" and "abort" being visible simultaneously
+			document.getElementById("reset").style.display = "none";
+			break;
 		}
 	}
 }
