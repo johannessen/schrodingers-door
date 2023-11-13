@@ -108,6 +108,10 @@ method lines_singlepage () {
 				text   => "Action: " . ($TEXT{$line->{event} // ''} // $line),
 			};
 			push @lines, $action;
+			push @lines, {
+				class => "line",
+				text  => $line->{text},
+			} if $line->{text};
 			
 			next LINE unless $line->{choice};
 			$action->{text} = "Action: " . $TEXT{choice};
