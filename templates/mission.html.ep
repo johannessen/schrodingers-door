@@ -24,8 +24,8 @@
 </div>
 % }
 
-<button id=back aria-label="back"><span>back</span></button>
-<button id=next aria-label="next"><span>next</span></button>
+<button type=button id=back aria-label="back"><span>back</span></button>
+<button type=button id=next aria-label="next"><span>next</span></button>
 
 <form action="<%= $action %>" method=post id=choices>
 <ul>
