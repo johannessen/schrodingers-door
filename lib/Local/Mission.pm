@@ -9,7 +9,7 @@ class Local::Mission;
 
 use Path::Tiny;
 use List::Util qw(first);
-use YAML::PP ();
+use YAML::Tiny ();
 
 my @EXT = qw(yaml yml);
 
@@ -25,8 +25,7 @@ method load ($slug, $dir = 'templates') {
 	$path = first { $_->exists } map { $path->child("$slug.$_") } @EXT;
 	die "Mission file '$slug' not found" unless defined $path;
 	
-	my $yaml = YAML::PP->new;
-	@scenes = $yaml->load_file($path->absolute);
+	@scenes = YAML::Tiny->read($path->absolute)->@*;
 	my $mission = shift @scenes;
 	
 	$name = $mission->{name};

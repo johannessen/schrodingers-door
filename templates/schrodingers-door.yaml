@@ -138,7 +138,12 @@ choices:
   You need to leave your room and return to Tau Station.
   You need to get past this door.
 
-- choice: [ door-force, door-vent, door-hack, door-shout, door-wait ]
+- choice:
+  - door-force
+  - door-vent
+  - door-hack
+  - door-shout
+  - door-wait
 
 
 ---
@@ -150,7 +155,9 @@ choices:
   Actually, there have always been rumours about threats.
   Lots of rumours.
 
-- choice: [ general-rumours, skip-general-rumours ]
+- choice:
+  - general-rumours
+  - skip-general-rumours
 
 
 ---
@@ -186,7 +193,8 @@ choices:
 - |
   (The intense efforts of Consortium officials to hide certain documents keep nagging at your conscience even as you think this. It was in the Barnard’s Star system that you learned about the Bakker Inquest, a report which tells what actually happened there during the Catastrophe, and which the Consortium has been refusing to release publicly. Why keep it secret if there is nothing to hide?)
 
-- choice: [ rumours ]
+- choice:
+  - rumours
 
 # Even though the Bakker Inquest might not actually have revealed anything
 # nefarious on the part of the Consortium, it’s worth mentioning that the
@@ -221,7 +229,12 @@ choices:
   When you heard it before, you dismissed the rumour out of hand as a matter of course. You’re a rational person, not some kind of a loon.
   But now, facing the reality of the door to Tau Station that won’t open, you need to consider the possibility that perhaps that rumour was true after all.
 
-- choice: [ door-force, door-vent, door-hack, door-shout, door-wait ]
+- choice:
+  - door-force
+  - door-vent
+  - door-hack
+  - door-shout
+  - door-wait
 
 
 ---
@@ -252,7 +265,12 @@ choices:
 - |
   Just like the door in your own room is keeping you apart from Tau Station.
 
-- choice: [ door-force, door-vent, door-hack, door-shout, door-wait ]
+- choice:
+  - door-force
+  - door-vent
+  - door-hack
+  - door-shout
+  - door-wait
   singlepage: show
 
 
@@ -281,7 +299,8 @@ choices:
 - |
   The esteemed professor is nowhere to be seen. But in the corridor outside her office, several computer terminals are powered up, their brightly lit screens showing the encyclopedia. Apparently, new edits were made only recently by several citizens, having connected through the Mesh from all over the galaxy.
 
-- choice: [ eyes ]
+- choice:
+  - eyes
 
 
 ---
@@ -316,4 +335,5 @@ choices:
 - event: success
   text: You received 0.00 credits.
 
-- choice: [ success ]
+- choice:
+  - success
