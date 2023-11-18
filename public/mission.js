@@ -156,7 +156,17 @@ function handleLineEvents (ele) {
 
 // Mission flow
 document.addEventListener("DOMContentLoaded", function () {
-	if (document.getElementById("choices")) {
+	var choicesForm = document.getElementById("choices");
+	if (choicesForm) {
+		
+		// Prevent submitting twice after accidental double-click
+		choicesForm.onsubmit = function () {
+			if (choicesForm.dataset.submitted) {
+				console.log("Form already submitted");
+				return false;
+			}
+			choicesForm.dataset.submitted = true;
+		};
 		
 		// Store the initial 'disabled' state of mission choices
 		// so that gotoLine() can restore it later

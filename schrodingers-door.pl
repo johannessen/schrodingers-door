@@ -71,26 +71,37 @@ get '/mission' => sub ($c) {
 } => 'mission';
 
 
+my $STAT_MINIMUM = 20;
+
 app->helper(choice_valid => sub ($c, $id) {
 	my $choices = $mission->choices;
 	return 0 unless $id && $choices->{$id};
 	my $uses_stat = $choices->{$id}{uses};
 	return 1 unless $uses_stat;
-	return $c->session('stats')->{$uses_stat} >= 20;
+	return $c->session('stats')->{$uses_stat} >= $STAT_MINIMUM;
 });
 
 
 post '/mission/choice' => sub ($c) {
 	my $choice = $c->param('choice') // '';
-	return $c->reply->exception unless $c->choice_valid($choice);
+	return $c->reply->exception("Choice '$choice' doesn't exist.") unless $mission->choices->{$choice};
 	
 	my $session = $c->my_session;
 	my $next_scene = $session->{scene} + 1;
 	++$next_scene if $choice =~ m/^skip\b/;
-	if (my $uses_stat = $mission->choices->{$choice}{uses}) {
-		my $stats = $session->{stats};
-		$stats->{$uses_stat} = 0;
+	
+	if ( my $uses_stat = $mission->choices->{$choice}{uses} ) {
+		if ( $session->{stats}{$uses_stat} < $STAT_MINIMUM ) {
+			# This shouldn't happen. But if it does anyway (perhaps due to a
+			# double-click?), then last_choice is probably already set correctly,
+			# which means it should be safe to just return to the mission.
+			$c->app->log->warn( sprintf "Choice '%s' requires at least %i '%s'",
+				$choice, $STAT_MINIMUM, $uses_stat );
+			return $c->redirect_to('mission');
+		}
+		$session->{stats}{$uses_stat} = 0;
 	}
+	
 	$c->app->log->info("Mission choice $choice");
 	$c->session( scene => $next_scene, last_choice => $choice );
 	$c->redirect_to('mission');
