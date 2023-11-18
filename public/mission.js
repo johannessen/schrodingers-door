@@ -29,7 +29,6 @@ function parseSvgMarkup () {
 	for (var i = 0; i < stationElements.length; ++i) {
 		var ele = stationElements[i];
 		var transform = ele.getAttribute("transform").match(/rotate\(([-0-9.]+)/);
-		var phase = parseFloat(transform[1]) / -360;
 		stations.push({
 			id: ele.id,
 			startPhase: parseFloat(transform[1]) / -360,
