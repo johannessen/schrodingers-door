@@ -43,6 +43,8 @@ get '/' => sub ($c) {
 
 
 get '/mission' => sub ($c) {
+	return $c->redirect_to('default') unless defined $c->session('scene');
+	
 	my $session = $c->my_session;
 	return $c->redirect_to('authors-note')
 		if $session->{scene} == $mission->scenes && $session->{last_choice} eq 'success';
@@ -129,7 +131,7 @@ post '/mission/reset' => sub ($c) {
 
 post '/mission/start' => sub ($c) {
 	$c->app->log->info('Mission start');
-	$c->session( expires => 1 );
+	$c->my_session;  # init session with first scene
 	$c->redirect_to('mission');
 } => 'start';
 
