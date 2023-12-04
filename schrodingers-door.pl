@@ -29,12 +29,7 @@ app->helper(my_session => sub ($c) {
 
 
 get '/' => sub ($c) {
-	if (defined $c->session('scene')) {
-		my $session = $c->my_session;
-		return $c->redirect_to('authors-note')
-			if $session->{scene} == $mission->scenes && $session->{last_choice} eq 'success';
-		return $c->redirect_to('mission');
-	}
+	return $c->redirect_to('mission') if defined $c->session('scene');
 	$c->render(
 		template => 'default',
 		mission => $mission,
@@ -44,10 +39,8 @@ get '/' => sub ($c) {
 
 get '/mission' => sub ($c) {
 	return $c->redirect_to('default') unless defined $c->session('scene');
-	
 	my $session = $c->my_session;
-	return $c->redirect_to('authors-note')
-		if $session->{scene} == $mission->scenes && $session->{last_choice} eq 'success';
+	return $c->redirect_to('authors-note') if $session->{last_choice} eq 'success';
 	
 	my (@lines, @choices);
 	push @lines, $mission->lines_for_choice($session->{last_choice});
@@ -111,12 +104,13 @@ post '/mission/choice' => sub ($c) {
 
 
 get '/authors-note' => sub ($c) {
+	return $c->redirect_to('default') unless ($c->session('last_choice') // '') eq 'success';
 	$c->render( mission => $mission );
 } => 'authors-note';
 
 
 post '/mission/success' => sub ($c) {
-	$c->app->log->info('Mission success');
+	$c->app->log->info($c->param('choice') ? 'Mission success' : 'Single page success');
 	$c->session( scene => $c->my_session->{scene} + 1, last_choice => 'success' );
 	$c->redirect_to('authors-note');
 } => 'success';

@@ -133,13 +133,15 @@ button:disabled, button:disabled:hover {
 	background: #282213;
 	cursor: default;
 }
+#reset button, .authors-note-link button {
+	padding-left: .2em;
+	padding-right: .2em;
+}
 #reset button {
 	position: absolute;
 	top: .2em;
 	left: .8em;
 	width: 11em;
-	padding-left: .2em;
-	padding-right: .2em;
 	font-size: .7em;
 	z-index: 1;
 }
@@ -345,9 +347,12 @@ main.singlepage .action.line li {
 #singlepage-warning {
 	margin-bottom: 3ex;
 }
-main.singlepage p.authors-note-link {
+main.singlepage .authors-note-link {
 	text-align: center;
-	margin: 2.5em 0 0;
+	margin: 2.5em auto 0;
+}
+main.singlepage .authors-note-link button {
+	width: 8.5em;
 }
 footer.singlepage {
 	position: static;

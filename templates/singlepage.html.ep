@@ -44,7 +44,9 @@
 </div>
 % }
 
-<p class=authors-note-link><a href="<%= url_for('authors-note') %>">Author’s Note</a>
+<form action="<%= url_for('success') %>" method=post class=authors-note-link>
+	<button name=authors-note>Author’s Note</button>
+</form>
 
 </main>
 
