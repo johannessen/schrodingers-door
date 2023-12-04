@@ -112,6 +112,14 @@ function gotoLine (line) {
 		choicesContainer.classList.remove("current");
 	}
 	
+	// The "success" button can be easy to miss; an extra close button might help
+	if (showingChoices && choices[0].value == "success") {
+		document.querySelector("#choices .close").innerHTML = "<button type=button></button>";
+		document.querySelector("#choices .close button").onclick = function () {
+			document.querySelector("#choices").choice.click();
+		};
+	}
+	
 	next.onclick = function () {
 		gotoLine(line + 1);
 	};

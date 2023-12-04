@@ -227,7 +227,7 @@ main.mission:before {
 	left: 4%;
 	width: 7%;
 }
-#next, #back {
+#next, #back, #choices .close button {
 	position: absolute;
 	bottom: 2%;
 	width: 7%;
@@ -250,6 +250,11 @@ main.mission:before {
 #next:disabled, #back:disabled {
 	opacity: 0;
 	cursor: default;
+}
+#choices .close button {
+	background-image: url(close.svg);
+	top: 2%;
+	right: 2%;
 }
 .line, #choices {
 	top: 0;
