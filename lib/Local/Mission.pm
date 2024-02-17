@@ -51,6 +51,12 @@ method name () {
 }
 
 
+# name without soft hyphens, which can cause issues in <title> for some clients
+method title () {
+	$name =~ s/\xad//gr
+}
+
+
 method summary () {
 	$summary
 }
