@@ -31,5 +31,6 @@ mission is available under the
 [ISC license](https://github.com/johannessen/schrodingers-door/blob/main/LICENSE).
 
 This is a private project and not an official offer by the creators of
-[Tau Station](https://allaroundtheworld.fr/game), formerly available
+[Tau Station](https://www.kickstarter.com/projects/1246097605/tau-station-the-mmo-biblio-rpg),
+formerly available
 at [taustation.space](https://taustation.space).

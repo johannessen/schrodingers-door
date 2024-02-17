@@ -47,7 +47,7 @@
 
 <footer<%== session('scene') > 0 ? " class=fadeout" : "" %>>
 	<p><strong><small>
-		This website is a private project and not an official offer by the creators of <a href=https://allaroundtheworld.fr/game>Tau&nbsp;Station</a>.
+		This website is a private project and not an official offer by the creators of <a href=https://www.kickstarter.com/projects/1246097605/tau-station-the-mmo-biblio-rpg>Tau&nbsp;Station</a>.
 		<br>Tau Station pictures courtesy of Makes Dreams Happen SASU, France.
 	</small></strong>
 </footer>

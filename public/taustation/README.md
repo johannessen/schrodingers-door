@@ -1,12 +1,17 @@
 # Image files from Tau Station
 
 This is a private project and not an official offer by the creators of
-[Tau Station](https://allaroundtheworld.fr/game). The images in this
+[Tau Station](https://www.kickstarter.com/projects/1246097605/tau-station-the-mmo-biblio-rpg).
+The images in this
 directory are source images from the game used under the conditions set
 in the Tau Station FAQ, courtesy of Makes Dreams Happen SASU, France.
 
-Since the official game website is no longer available on the web,
-I'm linking to the game page at All Around the World instead.
+Since the official game website (<https://taustation.space>) is no
+longer available on the web, and the game page at All Around the World
+(<https://allaroundtheworld.fr/game>) has now been taken down as well,
+I'm linking to the game page at Kickstarter instead. As of early 2024,
+this seems to be the last remaining “official” source of information
+on Tau Station anywhere on the internet.
 
 ## Extract from the Tau Station FAQ
 

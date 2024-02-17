@@ -95,7 +95,7 @@ While I do have memories of many of the game’s missions and even notes on some
 <li><a href=http://taustation.wikidot.com/keeping-the-peace><cite>Keeping the Peace</cite></a>
 <li><a href=http://taustation.wikidot.com/cradling-the-stars><cite>Cradling the Stars</cite></a>
 <li><a href=http://taustation.wikidot.com/galactic-coordinated-time>Galactic Coordinated Time</a> – the clock at the top shows real time, <abbr title="by the way">btw</abbr>
-<li><a href=https://tauguide.de/#travel>Systems and stations</a> – the map on this page moves in real time, too!
+<li><a href=https://taustation-fan.github.io/#travel>Systems and stations</a> – the map on this page moves in real time, too!
 <li>and others …
 </ul>
 
@@ -122,7 +122,7 @@ If you would like to tell me how you liked <%= $mission->name %>, please do get 
 <footer>
 	<p>The <a href=//github.com/johannessen/schrodingers-door>source code for <%= $mission->name %></a> is available on GitHub, along with terms of use.
 	<p><strong><small>
-		This website is a private project and not an official offer by the creators of <a href=https://allaroundtheworld.fr/game>Tau&nbsp;Station</a>.
+		This website is a private project and not an official offer by the creators of <a href=https://www.kickstarter.com/projects/1246097605/tau-station-the-mmo-biblio-rpg>Tau&nbsp;Station</a>.
 		<br>Tau Station pictures courtesy of Makes Dreams Happen SASU, France.
 	</small></strong>
 </footer>
