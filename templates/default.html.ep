@@ -3,7 +3,7 @@
 <meta charset=UTF-8>
 <title><%= $mission->name %>: A tribute to Tau Station</title>
 <meta name=viewport content="initial-scale=1">
-<meta name=robots content=noindex>
+<meta name=robots content=nofollow>
 <style>
 @import url(mission.css);
 </style>

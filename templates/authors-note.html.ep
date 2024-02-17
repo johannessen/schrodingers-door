@@ -24,7 +24,7 @@ If you would like to tell me about your experience with this mission, please fee
 I’d love to hear from you!
 
 <p>
-<%= $mission->name %> is a story about <a href=//taustation.space>taustation.space</a>, a rich browser-based text MMORPG with thought provoking stories set in a post-apocalyptic science fiction universe.
+<%= $mission->name %> is a story about <a href=//taustation.space>taustation.space</a>, a rich browser-based text <abbr title="massively multiplayer online role-playing game">MMORPG</abbr> with thought provoking stories set in a post-apocalyptic science fiction universe.
 Unfortunately, <a href=http://taustation.wikidot.com/tribute-page><cite>Tau Station</cite> was forced to close</a> before it left beta.
 
 <p>
@@ -46,7 +46,8 @@ Such difficulties in attributing the state of unobserved systems are familiar fr
 The thought experiment known as <a href=//en.wikipedia.org/wiki/Schr%C3%B6dinger%27s_cat>Schrödinger’s cat</a> illustrates that under certain interpretations of quantum mechanics, an animal might exist dead and alive simultaneously.
 The name of this story quite obviously is a nod of the head to that paradox.
 
-<p>But we don’t even have to resort to a paradox here to see that the state of <cite>Tau Station</cite> is at least somewhat uncertain.
+<p>
+But we don’t even have to resort to a paradox here to see that the state of <cite>Tau Station</cite> is at least somewhat uncertain.
 Personally, I believe that both the content of <cite>Tau Station</cite> and its technical platform hold immense value.
 <!--
 By content, I mean narrative and artwork.
@@ -74,7 +75,7 @@ https://doi.org/10.1093/acprof:osobl/9780199760091.003.0009
 In the meantime, I offer this story as a tribute to <cite>Tau Station</cite>.
 The story’s presentation is somewhat similar to the way in which many stories (or missions) in the game were presented.
 <%= $mission->name %> is, however, more linear than the typical game mission.
-The central story element being you sitting alone in your cabin, <%= $mission->name %> also doesn’t contain any conversations with other characters, which greatly simplified the technical requirements on my side.
+The central story element being you sitting alone in your cabin, <%= $mission->name %> also doesn’t contain any conversations with other characters, which greatly simplified the technical requirements at my end.
 
 <p>
 In writing <%= $mission->name %>, I relied on the <a href=http://taustation.wikidot.com>Tau Station Wiki</a> quite a lot.
